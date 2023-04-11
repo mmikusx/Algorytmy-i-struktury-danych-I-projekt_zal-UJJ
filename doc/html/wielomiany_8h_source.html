@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wielomiany na listach powiązanych: Plik źródłowy wielomiany.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Wielomiany na listach powiązanych
+   </div>
+   <div id="projectbrief">Wielomiany na listach powiązanych - projekt AiSD</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">wielomiany.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_poly.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_poly.html">Poly</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">int</span> coeff;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">int</span> power;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="class_poly.html">Poly</a> *next;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">   25</a></span>    <a class="code hl_function" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly</a>() : coeff(0), power(0) {}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_poly.html#a07c7f0bb2d45d4306b77a1b4d491cca7">   33</a></span>    <a class="code hl_class" href="class_poly.html">Poly</a> *<a class="code hl_function" href="class_poly.html#a07c7f0bb2d45d4306b77a1b4d491cca7">create</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *head, <span class="keywordtype">int</span> coeff, <span class="keywordtype">int</span> power) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_class" href="class_poly.html">Poly</a> *temp, *nextTemp;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">if</span> (head != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            temp = head;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">while</span> (temp-&gt;next != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                temp = temp-&gt;next;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            nextTemp = <span class="keyword">new</span> <a class="code hl_function" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            nextTemp-&gt;power = power;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            nextTemp-&gt;coeff = coeff;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            temp-&gt;next = nextTemp;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            temp = <span class="keyword">new</span> <a class="code hl_function" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            temp-&gt;power = power;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            temp-&gt;coeff = coeff;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            head = temp;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> head;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_poly.html#abd1173f974f2810a72e00e71287021ad">   61</a></span>    <a class="code hl_class" href="class_poly.html">Poly</a> *<a class="code hl_function" href="class_poly.html#abd1173f974f2810a72e00e71287021ad">whileNotNull</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *poly, <a class="code hl_class" href="class_poly.html">Poly</a> *tempSum) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_class" href="class_poly.html">Poly</a> *p = poly, *tmpSum = tempSum;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">while</span> (p != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            tmpSum-&gt;next = <span class="keyword">new</span> <a class="code hl_function" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            tmpSum = tmpSum-&gt;next;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            tmpSum-&gt;coeff = p-&gt;coeff;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            tmpSum-&gt;power = p-&gt;power;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            p = p-&gt;next;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_poly.html#a218ea79ecf69d07ccb47a7667ac0fa06">   85</a></span>    <a class="code hl_class" href="class_poly.html">Poly</a> *<a class="code hl_function" href="class_poly.html#a218ea79ecf69d07ccb47a7667ac0fa06">actionWhenOneNullptr</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *poly1, <a class="code hl_class" href="class_poly.html">Poly</a> *poly2, <a class="code hl_class" href="class_poly.html">Poly</a> *result, <span class="keywordtype">string</span> addOrSubstract) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_class" href="class_poly.html">Poly</a> *p1 = poly1, *p2 = poly2, *temp;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">if</span> (p1 == <span class="keyword">nullptr</span> &amp;&amp; p2 != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">if</span> (addOrSubstract == <span class="stringliteral">&quot;add&quot;</span>) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                <span class="keywordflow">return</span> p2;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (addOrSubstract == <span class="stringliteral">&quot;sub&quot;</span>) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                temp = p2;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">while</span> (p2 != <span class="keyword">nullptr</span>) { <span class="comment">// zmiana znaku przy wspolczynniku w drugim wielomianie</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    <span class="keywordtype">int</span> x = p2-&gt;coeff;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    temp-&gt;power = p2-&gt;power;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    temp-&gt;coeff = (-1) * x;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    p2 = p2-&gt;next;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    temp = temp-&gt;next;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    result = temp;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">return</span> p1;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_poly.html#a15399ab7e9458143c844acdeec6d64d4">  115</a></span>    <a class="code hl_class" href="class_poly.html">Poly</a> *<a class="code hl_function" href="class_poly.html#a15399ab7e9458143c844acdeec6d64d4">add</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *p1, <a class="code hl_class" href="class_poly.html">Poly</a> *p2, <a class="code hl_class" href="class_poly.html">Poly</a> *result) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_class" href="class_poly.html">Poly</a> *poly1 = p1, *poly2 = p2, *tempSum;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <a class="code hl_function" href="class_poly.html#a218ea79ecf69d07ccb47a7667ac0fa06">actionWhenOneNullptr</a>(poly1, poly2, result, <span class="stringliteral">&quot;add&quot;</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">while</span> (poly1 != <span class="keyword">nullptr</span> &amp;&amp; poly2 != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">if</span> (result != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                tempSum-&gt;next = <span class="keyword">new</span> <a class="code hl_function" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                tempSum = tempSum-&gt;next;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                result = <span class="keyword">new</span> <a class="code hl_function" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                tempSum = result;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">if</span> (poly1-&gt;power &lt;= poly2-&gt;power) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                <span class="keywordflow">if</span> (poly1-&gt;power &gt;= poly2-&gt;power) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    <span class="keywordflow">if</span> (poly1-&gt;power == poly2-&gt;power) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                        tempSum-&gt;coeff = poly1-&gt;coeff + poly2-&gt;coeff;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                        tempSum-&gt;power = poly1-&gt;power;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                        poly1 = poly1-&gt;next;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                        poly2 = poly2-&gt;next;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    tempSum-&gt;coeff = poly2-&gt;coeff;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                    tempSum-&gt;power = poly2-&gt;power;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                    poly2 = poly2-&gt;next;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                tempSum-&gt;coeff = poly1-&gt;coeff;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                tempSum-&gt;power = poly1-&gt;power;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                poly1 = poly1-&gt;next;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <a class="code hl_function" href="class_poly.html#abd1173f974f2810a72e00e71287021ad">whileNotNull</a>(poly1, tempSum);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <a class="code hl_function" href="class_poly.html#abd1173f974f2810a72e00e71287021ad">whileNotNull</a>(poly2, tempSum);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="class_poly.html#a298c28144a40250f9e34c0e3fee196b2">  161</a></span>    <a class="code hl_class" href="class_poly.html">Poly</a> *<a class="code hl_function" href="class_poly.html#a298c28144a40250f9e34c0e3fee196b2">substract</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *p1, <a class="code hl_class" href="class_poly.html">Poly</a> *p2, <a class="code hl_class" href="class_poly.html">Poly</a> *result) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <a class="code hl_class" href="class_poly.html">Poly</a> *poly1 = p1, *poly2 = p2, *tempSum;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <a class="code hl_function" href="class_poly.html#a218ea79ecf69d07ccb47a7667ac0fa06">actionWhenOneNullptr</a>(poly1, poly2, result, <span class="stringliteral">&quot;sub&quot;</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">while</span> (poly1 != <span class="keyword">nullptr</span> &amp;&amp; poly2 != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keywordflow">if</span> (result != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                tempSum-&gt;next = <span class="keyword">new</span> <a class="code hl_function" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly</a>();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                tempSum = tempSum-&gt;next;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                result = <span class="keyword">new</span> <a class="code hl_function" href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly</a>();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                tempSum = result;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="keywordflow">if</span> (poly1-&gt;power != poly2-&gt;power) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">if</span> (poly1-&gt;power &lt;= poly2-&gt;power) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                    <span class="keywordflow">if</span> (poly1-&gt;power &lt; poly2-&gt;power) {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                        tempSum-&gt;coeff = -poly2-&gt;coeff;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                        tempSum-&gt;power = poly2-&gt;power;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                        poly2 = poly2-&gt;next;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                    }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                    tempSum-&gt;coeff = poly1-&gt;coeff;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                    tempSum-&gt;power = poly1-&gt;power;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                    poly1 = poly1-&gt;next;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                tempSum-&gt;coeff = poly1-&gt;coeff - poly2-&gt;coeff;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                tempSum-&gt;power = poly1-&gt;power;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                poly1 = poly1-&gt;next;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                poly2 = poly2-&gt;next;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <a class="code hl_function" href="class_poly.html#abd1173f974f2810a72e00e71287021ad">whileNotNull</a>(poly1, tempSum);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <a class="code hl_function" href="class_poly.html#abd1173f974f2810a72e00e71287021ad">whileNotNull</a>(poly2, tempSum);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="class_poly.html#a8c5bf3994c029001cb5d298ddb411e41">  207</a></span>    <a class="code hl_class" href="class_poly.html">Poly</a> *<a class="code hl_function" href="class_poly.html#a8c5bf3994c029001cb5d298ddb411e41">reductDuplicates</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *result){</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <a class="code hl_class" href="class_poly.html">Poly</a> *tmp, *tmp2, *duplicated;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        tmp = result;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keywordflow">while</span>(tmp != <span class="keyword">nullptr</span> &amp;&amp; tmp-&gt;next != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            tmp2 = tmp;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordflow">while</span>(tmp2-&gt;next != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                <span class="keywordflow">if</span> (tmp-&gt;power != tmp2-&gt;next-&gt;power) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                    tmp2 = tmp2-&gt;next;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                    tmp-&gt;coeff = tmp-&gt;coeff + tmp2-&gt;next-&gt;coeff;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                    duplicated = tmp2-&gt;next;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                    tmp2-&gt;next = tmp2-&gt;next-&gt;next;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                    <span class="keyword">delete</span> (duplicated);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            tmp = tmp-&gt;next;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="class_poly.html#a8a6b69363b1c4bf17bc7fb4d09f53d44">  234</a></span>    <a class="code hl_class" href="class_poly.html">Poly</a> *<a class="code hl_function" href="class_poly.html#a8a6b69363b1c4bf17bc7fb4d09f53d44">multiply</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *p1, <a class="code hl_class" href="class_poly.html">Poly</a> *p2, <a class="code hl_class" href="class_poly.html">Poly</a> *result){</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <a class="code hl_class" href="class_poly.html">Poly</a> *poly1 = p1, *poly2 = p2;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">while</span> (poly1 != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">while</span> (poly2 != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordtype">int</span> coeff = poly1-&gt;coeff * poly2-&gt;coeff;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                <span class="keywordtype">int</span> power = poly1-&gt;power + poly2-&gt;power;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                result = <a class="code hl_function" href="class_poly.html#a07c7f0bb2d45d4306b77a1b4d491cca7">create</a>(result, coeff, power);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                poly2 = poly2-&gt;next;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            poly2 = p2;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            poly1 = poly1-&gt;next;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <a class="code hl_function" href="class_poly.html#a8c5bf3994c029001cb5d298ddb411e41">reductDuplicates</a>(result);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="class_poly.html#a344e868f343cc424bb53abad78a3b219">  255</a></span>    <a class="code hl_class" href="class_poly.html">Poly</a> *<a class="code hl_function" href="class_poly.html#a344e868f343cc424bb53abad78a3b219">display</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *head) {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <a class="code hl_class" href="class_poly.html">Poly</a> *temp = head;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keywordflow">while</span> (temp != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            <span class="keywordflow">if</span>(temp-&gt;power != 0) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                cout &lt;&lt; temp-&gt;coeff &lt;&lt; <span class="stringliteral">&quot;x^&quot;</span> &lt;&lt; temp-&gt;power;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                cout &lt;&lt; temp-&gt;coeff;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keywordflow">if</span> (temp-&gt;next != <span class="keyword">nullptr</span> &amp;&amp; temp-&gt;next-&gt;coeff &gt;= 0) {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                <span class="keywordflow">if</span>(temp-&gt;next-&gt;coeff == 0){</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                    temp-&gt;next = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                    cout &lt;&lt; <span class="stringliteral">&quot; + &quot;</span>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            temp = temp-&gt;next;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_poly.html#ab6bf1a806fb92ce012b3273149e4f872">polynominalValue</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *poly, <span class="keywordtype">int</span> x);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_poly.html#a8a3c9db3343dd6db2d507c90f1a9ee84">isZero</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *poly);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_poly.html#ae13426f1036ea806163c80e07cfe26fb">isEqual</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *poly1, <a class="code hl_class" href="class_poly.html">Poly</a> *poly2);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>};</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="class_poly.html#ab6bf1a806fb92ce012b3273149e4f872">  298</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="class_poly.html#ab6bf1a806fb92ce012b3273149e4f872">Poly::polynominalValue</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *poly, <span class="keywordtype">int</span> x){</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keywordtype">int</span> result;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    result = poly-&gt;coeff * pow(x, poly-&gt;power);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordflow">while</span> (poly-&gt;next != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        poly = poly-&gt;next;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        result += poly-&gt;coeff * pow(x, poly-&gt;power);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>}</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno"><a class="line" href="class_poly.html#a8a3c9db3343dd6db2d507c90f1a9ee84">  309</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_poly.html#a8a3c9db3343dd6db2d507c90f1a9ee84">Poly::isZero</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *head) {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <a class="code hl_class" href="class_poly.html">Poly</a> *temp = head;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keywordtype">bool</span> returned = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keywordflow">while</span>(temp != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">if</span>(temp-&gt;coeff == 0){</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <span class="keywordflow">if</span>(temp-&gt;next == <span class="keyword">nullptr</span>){</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                cout &lt;&lt; <span class="stringliteral">&quot;Wielomian ma wszystkie wspolczynniki rowne 0&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            }</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            cout &lt;&lt; <span class="stringliteral">&quot;Wielomian nie ma wszystkich wspolczynnikow rownych 0&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            returned = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        temp = temp-&gt;next;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordflow">return</span> returned;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="class_poly.html#ae13426f1036ea806163c80e07cfe26fb">  328</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_poly.html#ae13426f1036ea806163c80e07cfe26fb">Poly::isEqual</a>(<a class="code hl_class" href="class_poly.html">Poly</a> *poly1, <a class="code hl_class" href="class_poly.html">Poly</a> *poly2) {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <a class="code hl_class" href="class_poly.html">Poly</a> *temp = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    temp = <a class="code hl_function" href="class_poly.html#a298c28144a40250f9e34c0e3fee196b2">substract</a>(poly1, poly2, temp);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    cout &lt;&lt; <span class="stringliteral">&quot;Po odjeciu wielomianu 2 od 1 mamy wielomian rowny: &quot;</span>;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <a class="code hl_function" href="class_poly.html#a344e868f343cc424bb53abad78a3b219">display</a>(temp);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordtype">bool</span> ifCond = <a class="code hl_function" href="class_poly.html#a8a3c9db3343dd6db2d507c90f1a9ee84">isZero</a>(temp);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keywordtype">bool</span> returned = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        <span class="keywordflow">if</span> (ifCond) {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            cout &lt;&lt; <span class="stringliteral">&quot;Wielomiany sa sobie rowne&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            cout &lt;&lt; <span class="stringliteral">&quot;Wielomiany nie sa sobie rowne&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            returned = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">return</span> returned;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>}</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">//TODO</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">//isZero</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="comment">//isEqual</span></div>
+<div class="ttc" id="aclass_poly_html"><div class="ttname"><a href="class_poly.html">Poly</a></div><div class="ttdef"><b>Definition:</b> wielomiany.h:12</div></div>
+<div class="ttc" id="aclass_poly_html_a07c7f0bb2d45d4306b77a1b4d491cca7"><div class="ttname"><a href="class_poly.html#a07c7f0bb2d45d4306b77a1b4d491cca7">Poly::create</a></div><div class="ttdeci">Poly * create(Poly *head, int coeff, int power)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:33</div></div>
+<div class="ttc" id="aclass_poly_html_a15399ab7e9458143c844acdeec6d64d4"><div class="ttname"><a href="class_poly.html#a15399ab7e9458143c844acdeec6d64d4">Poly::add</a></div><div class="ttdeci">Poly * add(Poly *p1, Poly *p2, Poly *result)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:115</div></div>
+<div class="ttc" id="aclass_poly_html_a218ea79ecf69d07ccb47a7667ac0fa06"><div class="ttname"><a href="class_poly.html#a218ea79ecf69d07ccb47a7667ac0fa06">Poly::actionWhenOneNullptr</a></div><div class="ttdeci">Poly * actionWhenOneNullptr(Poly *poly1, Poly *poly2, Poly *result, string addOrSubstract)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:85</div></div>
+<div class="ttc" id="aclass_poly_html_a298c28144a40250f9e34c0e3fee196b2"><div class="ttname"><a href="class_poly.html#a298c28144a40250f9e34c0e3fee196b2">Poly::substract</a></div><div class="ttdeci">Poly * substract(Poly *p1, Poly *p2, Poly *result)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:161</div></div>
+<div class="ttc" id="aclass_poly_html_a344e868f343cc424bb53abad78a3b219"><div class="ttname"><a href="class_poly.html#a344e868f343cc424bb53abad78a3b219">Poly::display</a></div><div class="ttdeci">Poly * display(Poly *head)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:255</div></div>
+<div class="ttc" id="aclass_poly_html_a8a3c9db3343dd6db2d507c90f1a9ee84"><div class="ttname"><a href="class_poly.html#a8a3c9db3343dd6db2d507c90f1a9ee84">Poly::isZero</a></div><div class="ttdeci">bool isZero(Poly *poly)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:309</div></div>
+<div class="ttc" id="aclass_poly_html_a8a6b69363b1c4bf17bc7fb4d09f53d44"><div class="ttname"><a href="class_poly.html#a8a6b69363b1c4bf17bc7fb4d09f53d44">Poly::multiply</a></div><div class="ttdeci">Poly * multiply(Poly *p1, Poly *p2, Poly *result)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:234</div></div>
+<div class="ttc" id="aclass_poly_html_a8c5bf3994c029001cb5d298ddb411e41"><div class="ttname"><a href="class_poly.html#a8c5bf3994c029001cb5d298ddb411e41">Poly::reductDuplicates</a></div><div class="ttdeci">Poly * reductDuplicates(Poly *result)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:207</div></div>
+<div class="ttc" id="aclass_poly_html_aa3def076b74bed67904976ad4f9fe9b1"><div class="ttname"><a href="class_poly.html#aa3def076b74bed67904976ad4f9fe9b1">Poly::Poly</a></div><div class="ttdeci">Poly()</div><div class="ttdef"><b>Definition:</b> wielomiany.h:25</div></div>
+<div class="ttc" id="aclass_poly_html_ab6bf1a806fb92ce012b3273149e4f872"><div class="ttname"><a href="class_poly.html#ab6bf1a806fb92ce012b3273149e4f872">Poly::polynominalValue</a></div><div class="ttdeci">int polynominalValue(Poly *poly, int x)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:298</div></div>
+<div class="ttc" id="aclass_poly_html_abd1173f974f2810a72e00e71287021ad"><div class="ttname"><a href="class_poly.html#abd1173f974f2810a72e00e71287021ad">Poly::whileNotNull</a></div><div class="ttdeci">Poly * whileNotNull(Poly *poly, Poly *tempSum)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:61</div></div>
+<div class="ttc" id="aclass_poly_html_ae13426f1036ea806163c80e07cfe26fb"><div class="ttname"><a href="class_poly.html#ae13426f1036ea806163c80e07cfe26fb">Poly::isEqual</a></div><div class="ttdeci">bool isEqual(Poly *poly1, Poly *poly2)</div><div class="ttdef"><b>Definition:</b> wielomiany.h:328</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

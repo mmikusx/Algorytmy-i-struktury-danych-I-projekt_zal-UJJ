@@ -1,0 +1,1 @@
+Aby wejść do dokumentacji projektu należy otworzyć folder doc, następnie html oraz otworzyc plik index.html
